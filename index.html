@@ -282,7 +282,7 @@
             <div class="info-card">
                 <p><strong>Uygulama Adı:</strong> VAKİT</p>
                 <p><strong>Paket Kimliği:</strong> <code>com.vakit.app</code></p>
-                <p><strong>Geliştirici / Veri Sorumlusu:</strong> <span class="placeholder">Tarık Oktay Fazlıoglu</span></p>
+                <p><strong>Geliştirici / Veri Sorumlusu:</strong> Tarık Oktay Fazlıoglu</p>
                 <p><strong>İletişim / Destek E-postası:</strong> <a href="mailto:armadede61@gmail.com" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">armadede61@gmail.com</a></p>
                 <p><strong>Resmi Web Sitesi:</strong> <a href="https://armadede61.github.io/vakit-gizlilik-politikasi/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">https://armadede61.github.io/vakit-gizlilik-politikasi/</a></p>
             </div>
@@ -293,8 +293,8 @@
             <h2><span class="section-num">2</span> İşlenen Veriler ve Kullanım Amaçları</h2>
             <p>VAKİT uygulamasının veri işleme prensipleri şu şekildedir:</p>
             <ul>
-                <li><strong>Kullanıcı Hesabı Bulunmaz:</strong> Uygulamaya üye olunması, e-posta, telefon numarası veya şifre girilmesi gerekmez. Hesap oluşturma veya kimlik doğrulama mekanizması bulunmamaktadır.</li>
-                <li><strong>Kişisel Kimlik Bilgisi Toplanmaz:</strong> Ad, soyad, T.C. kimlik numarası, rehber, fotoğraf galerisi veya benzeri hiçbir kişisel veri toplanmaz ve işlenmez.</li>
+                <li><strong>Kullanıcı Hesabı ve Kimlik Doğrulama İstenmez:</strong> Uygulamayı kullanmak için üye olunması, e-posta, telefon numarası veya parola girilmesi gerekmez. Uygulama bünyesinde ad, soyad, T.C. kimlik numarası veya rehber gibi kişisel kimlik verileri toplanmaz ve talep edilmez.</li>
+                <li><strong>Harici Bağlantı ve Sunucu Günlükleri:</strong> Uygulama kullanıcı profili oluşturmasa da, internet üzerinden vakit indirilirken veya ses akışı yapılırken bağlandığınız harici sunucular (imsakiyem.com, everyayah.com vb.) standart internet protokolleri gereği IP adresi, erişim saati ve cihaz istemci başlıkları (User-Agent) gibi temel bağlantı günlüklerini kendi sunucularında kaydedebilir.</li>
                 <li><strong>Finansal Bilgi İstenmez:</strong> Uygulama tamamen ücretsiz olup kredi kartı, banka bilgisi veya uygulama içi satın alma verisi talep etmez.</li>
                 <li><strong>Reklam ve Analitik SDK'sı Bulunmaz:</strong> Uygulama kod tabanında üçüncü taraf reklam ağlarına (Google AdMob, Unity, Meta vb.) veya kullanıcı davranışlarını takip eden analitik/telemetri servislerine (Firebase Analytics, Crashlytics, Adjust, Facebook SDK vb.) ait hiçbir yazılım geliştirme kiti (SDK) yer almamaktadır.</li>
             </ul>
@@ -319,7 +319,7 @@
                         <tr>
                             <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
                             <td>Yalnızca <strong>Kıble Pusulası</strong> ekranında cihaz ile Kâbe koordinatları (<code>21.4225° K, 39.8262° D</code>) arasındaki açıyı küresel trigonometriyle anlık hesaplamak.</td>
-                            <td><strong>KESİNLİKLE HAYIR.</strong> GPS koordinatları sunuculara gönderilmez, veritabanına veya diske kaydedilmez; yalnızca ekranda anlık işlenir.</td>
+                            <td>Uygulama, GPS ve ağ tabanlı konum koordinatlarını hiçbir uzak sunucuya veya üçüncü tarafa iletmez; yerel veritabanına veya diske kaydetmez. Koordinatlar yalnızca Kıble Pusulası ekranı açıkken cihaz belleğinde (RAM) anlık olarak işlenir.</td>
                         </tr>
                         <tr>
                             <td><code>SCHEDULE_EXACT_ALARM</code><br><code>USE_EXACT_ALARM</code></td>
@@ -396,15 +396,15 @@
         <section>
             <h2><span class="section-num">7</span> Veri Güvenliği ve Üçüncü Taraf Hizmetler</h2>
             <ul>
-                <li><strong>Şifreli İletişim:</strong> Namaz vakti indirme ve ses akışı işlemleri sırasında harici içerik sunucularıyla kurulan tüm ağ trafiği HTTPS / TLS protokolü ile şifrelenir.</li>
-                <li><strong>Üçüncü Taraf Sunucu Kayıtları:</strong> VAKİT, harici açık veri ve ses sunucularına (imsakiyem.com, diyanet.gov.tr, everyayah.com, quranicaudio.com) yalnızca standart internet sorguları iletir. Bu sunucuların standart web sunucusu protokolleri gereği tutabileceği erişim kayıtları (IP adresi, istek zamanı, tarayıcı başlığı) üzerinde VAKİT'in bir denetimi veya sahipliği bulunmamaktadır.</li>
+                <li><strong>Ağ Bağlantıları ve Protokol:</strong> Namaz vakti sorguları ve çevrimiçi tilavet akışı için uygulama kodunda tanımlı bağlantı adresleri HTTPS protokolü üzerinden yapılandırılmıştır. Bununla birlikte, üçüncü taraf açık içerik sunucularının (imsakiyem.com, everyayah.com, quranicaudio.com vb.) sertifika sürekliliği, sunucu güvenliği ve ağ altyapısı ilgili bağımsız servis sağlayıcıların sorumluluğundadır ve VAKİT tarafından garanti edilemez.</li>
+                <li><strong>Üçüncü Taraf Sunucu Kayıtları:</strong> VAKİT, harici açık veri ve ses sunucularına yalnızca standart internet sorguları iletir. Bu sunucuların standart web sunucusu protokolleri gereği tutabileceği erişim kayıtları (IP adresi, istek zamanı, kullanıcı istemci başlığı) üzerinde VAKİT'in bir denetimi, müdahale yetkisi veya erişimi bulunmamaktadır.</li>
             </ul>
         </section>
 
         <!-- 8. Çocukların Gizliliği -->
         <section>
             <h2><span class="section-num">8</span> Çocukların Gizliliği</h2>
-            <p>VAKİT uygulaması her yaştan kullanıcının kullanımına uygundur. Uygulama, 13 yaşın altındaki çocuklardan bilerek veya bilmeyerek hiçbir kişisel veri toplamamaktadır. Hesap açma zorunluluğu ve veri toplama mekanizması bulunmadığından çocukların çevrimiçi mahremiyeti doğal olarak korunmaktadır.</p>
+            <p>VAKİT uygulaması genel kullanıcı kitlesine yönelik tasarlanmış olup herhangi bir üyelik, kayıt veya profil oluşturma özelliği içermez. Uygulama, 13 yaşın (veya kullanıcının bulunduğu ülkedeki geçerli yasal yaş sınırının) altındaki çocuklardan bilerek kişisel kimlik verisi talep etmemekte ve toplamamaktadır. Bir ebeveyn veya yasal vasi, çocuğunun geliştiriciye doğrudan herhangi bir kişisel veri ilettiğini tespit ederse, bu bilginin incelenmesi ve silinmesi için destek e-postası üzerinden bizimle iletişime geçebilir.</p>
         </section>
 
         <!-- 9. Değişiklikler ve İletişim -->
@@ -413,7 +413,7 @@
             <p>İşbu Gizlilik Politikası zaman zaman güncellenebilir. Güncellemeler bu web sayfası üzerinden yayımlandığı anda geçerlilik kazanır.</p>
             <div class="info-card">
                 <p>Sorularınız, geri bildirimleriniz veya talepleriniz için lütfen bizimle iletişime geçiniz:</p>
-                <p><strong>Veri Sorumlusu:</strong> <span class="placeholder">[GELİŞTİRİCİ / ŞİRKET YASAL ADI VEYA UNVANI]</span></p>
+                <p><strong>Veri Sorumlusu:</strong> Tarık Oktay Fazlıoglu</p>
                 <p><strong>E-posta:</strong> <a href="mailto:armadede61@gmail.com" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">armadede61@gmail.com</a></p>
                 <p><strong>Web Sitesi:</strong> <a href="https://armadede61.github.io/vakit-gizlilik-politikasi/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">https://armadede61.github.io/vakit-gizlilik-politikasi/</a></p>
             </div>
