@@ -266,8 +266,8 @@
         <h1>Gizlilik Politikası (Privacy Policy)</h1>
         <p class="subtitle">Kullanıcı mahremiyeti, yerel veri saklama ve donanım izinlerine ilişkin resmi bilgilendirme.</p>
         <div class="dates-bar">
-            <span><strong>Son Güncelleme:</strong> 15 Ekim 2026</span>
-            <span><strong>Yürürlük Tarihi:</strong> 15 Ekim 2026</span>
+            <span><strong>Son Güncelleme:</strong> 17 Ekim 2026</span>
+            <span><strong>Yürürlük Tarihi:</strong> 17 Ekim 2026</span>
         </div>
     </header>
 
@@ -281,7 +281,7 @@
             <h2><span class="section-num">1</span> Uygulama ve Geliştirici Bilgileri</h2>
             <div class="info-card">
                 <p><strong>Uygulama Adı:</strong> VAKİT</p>
-                <p><strong>Paket Kimliği:</strong> <code>com.vakit.app</code></p>
+                <p><strong>Paket Kimliği:</strong> <code>com.armadede61.vakit</code></p>
                 <p><strong>Geliştirici / Veri Sorumlusu:</strong> Tarık Oktay Fazlıoglu</p>
                 <p><strong>İletişim / Destek E-postası:</strong> <a href="mailto:armadede61@gmail.com" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">armadede61@gmail.com</a></p>
                 <p><strong>Resmi Web Sitesi:</strong> <a href="https://armadede61.github.io/vakit-gizlilik-politikasi/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-green); text-decoration: none; font-weight: 500;">https://armadede61.github.io/vakit-gizlilik-politikasi/</a></p>
@@ -318,13 +318,18 @@
                     <tbody>
                         <tr>
                             <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
-                            <td>Yalnızca <strong>Kıble Pusulası</strong> ekranında cihaz ile Kâbe koordinatları (<code>21.4225° K, 39.8262° D</code>) arasındaki açıyı küresel trigonometriyle anlık hesaplamak.</td>
-                            <td>Uygulama, GPS ve ağ tabanlı konum koordinatlarını hiçbir uzak sunucuya veya üçüncü tarafa iletmez; yerel veritabanına veya diske kaydetmez. Koordinatlar yalnızca Kıble Pusulası ekranı açıkken cihaz belleğinde (RAM) anlık olarak işlenir.</td>
+                            <td><strong>Kıble Pusulası:</strong> Cihaz ile Kâbe koordinatları arasındaki açıyı küresel trigonometriyle anlık hesaplamak.<br><strong>Otomatik Konum Tespiti:</strong> Kullanıcı izin verdiğinde cihazın bulunduğu il/ilçeyi tespit edip Diyanet resmi ilçe kataloğu ile tek seferlik eşleştirmek.</td>
+                            <td>GPS koordinatları uzak sunuculara veya üçüncü taraflara iletilmez; sürekli arka plan konum takibi yapılmaz. Yalnızca işlem anında cihaz belleğinde (RAM) işlenir.</td>
                         </tr>
                         <tr>
                             <td><code>SCHEDULE_EXACT_ALARM</code><br><code>USE_EXACT_ALARM</code></td>
                             <td>Namaz vakti ve erken hatırlatıcı alarmlarını cihaz uyku (Doze) modunda olsa bile tam saniyesinde tetiklemek.</td>
                             <td>Yalnızca cihaz içi AlarmManager sisteminde çalışır.</td>
+                        </tr>
+                        <tr>
+                            <td><code>USE_FULL_SCREEN_INTENT</code></td>
+                            <td>Android 14–16 sürümlerinde ezan vakti girdiğinde telefon kilitliyken alarm uygulamalarındaki gibi tam ekran uyarı penceresi açmak ve büyük "DURDUR" butonu sunmak.</td>
+                            <td>Cihaz içi yerel alarm arayüzü.</td>
                         </tr>
                         <tr>
                             <td><code>POST_NOTIFICATIONS</code></td>
@@ -422,7 +427,7 @@
 
     <footer>
         <p>&copy; 2026 VAKİT. Tüm hakları saklıdır.</p>
-        <p style="margin-top: 4px; font-size: 12px;">Bu gizlilik politikası VAKİT Android uygulaması (v1.0.0) için hazırlanmıştır.</p>
+        <p style="margin-top: 4px; font-size: 12px;">Bu gizlilik politikası VAKİT Android uygulaması (v1.0.1) için hazırlanmıştır.</p>
     </footer>
 </div>
 
